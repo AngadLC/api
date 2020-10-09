@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+    <h1>what does your website look like</h1>
+    <div class="CenterDiv">
+        <div class="details">
+            <label for="">Enter your  Name</label>
+            <br>
+            <input type="text" name="" id="nameid">
+        </div>
+        <div class="imgdiv">
+            <img src="./fancyimage.jpg" alt="" width="200px" height="200px" id="imgchange">
+        </div>
+    </div>
+    <button>Click ME</button>
+</section>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name = $("#nameid").val();
+            $('#imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`)
+        })
+    })
+</script>
+</body>
+
+</html>
